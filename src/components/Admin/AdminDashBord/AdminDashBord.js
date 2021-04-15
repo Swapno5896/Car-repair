@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import AddReview from '../AddReview/AddReview';
 import AddService from '../AddService/AddService';
+import DeletService from "../DeletService/DeletService";
 import Sidebar from '../Sidebar/Sidebar';
 
 const AdminDashBord = () => {
@@ -19,7 +20,7 @@ const AdminDashBord = () => {
             <Sidebar></Sidebar>
         </div>
         <div class="col-6 col-md-6">
-
+<DeletService></DeletService>
             <Router>
                 <Switch>
                 <Route path='/admin/addService'>
