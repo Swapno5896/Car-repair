@@ -47,7 +47,7 @@ console.log(loggedInUser);
               </Route>
               <Route path='/ChangeState'>
                   <NavBar></NavBar>
-                 <ChangeServiceState></ChangeServiceState>
+                  <ChangeServiceState></ChangeServiceState>
               </Route>   
               <Route path='/deleatService'>
                   <NavBar></NavBar>
