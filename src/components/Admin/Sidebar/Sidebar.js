@@ -1,29 +1,22 @@
-import React from "react";
+import React from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
-import { useHistory } from "react-router-dom";
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 const Sidebar = () => {
-    let history = useHistory();
-    const handeladdService =()=>{
-        history.push("/admin/addService");
-    }
     return (
-    <div style={{height:'8oopx'}}>
-         <nav class="nav flex-column">
-           
-   
-           
-             <Link to="/addService"> Add service</Link>
+        <div>
+        <Link  class="nav-link" to="/addService">addService</Link>
+      <Link  class="nav-link" to="/addReview">addReview</Link>
+      <Link  class="nav-link" to="/ChangeState">ChangeState</Link>
+      <Link  class="nav-link" to="/deleatService">deleatService</Link>
+       <Link  class="nav-link" to="/addAdmin">deleatService</Link>
+        </div>
+    
 
-       
-        </nav>
-    </div>
+     
     );
 };
 

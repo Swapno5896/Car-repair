@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Sidebar from '../Sidebar/Sidebar';
 const AddReview = () => {
     const [review,setReview] = useState({userName:'',userImg:'',review:'',feedBack:''})
     const handelInputData = (event) =>{
@@ -26,11 +27,12 @@ const AddReview = () => {
     }
     return (
       <div class="row g-3">
-      <div class="col-sm-6 col-md-4">
+               <div class="col-sm-6 col-md-4">
       <Link  class="nav-link" to="/addService">addService</Link>
-    <Link  class="nav-link" to="/addReview">addReview</Link>
-    <Link  class="nav-link" to="/ChangeState">ChangeState</Link>
-      <Link  class="nav-link" to="/deleatService">deleatService</Link>
+      <Link  class="nav-link" to="/addReview">add Review</Link>
+      <Link  class="nav-link" to="/ChangeState">ChangeState</Link>
+      <Link  class="nav-link" to="/deleatService/a">deleatService</Link>
+      <Link  class="nav-link" to="/addAdmin">addAdmin</Link>
       </div>
       <div class="col-6 col-md-6">
                  {/*  content */}

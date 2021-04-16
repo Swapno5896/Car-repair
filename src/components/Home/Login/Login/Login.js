@@ -2,8 +2,12 @@ import React, { useState }  from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config'
-
+import { useHistory, useLocation } from 'react-router-dom';
 const Login = () => {
+  const history = useHistory();
+  const location = useLocation();
+  const { from } = location.state || { from: { pathname: "/" } };
+
   const [loggedInUser, setLoggedInUser] = useState({});
 
   if (firebase.apps.length === 0) {
@@ -42,7 +46,7 @@ const Login = () => {
     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
       .then(function (idToken) {
         sessionStorage.setItem('token', idToken);
-        // history.replace(from);
+        history.replace(from);
       }).catch(function (error) {
         // Handle error
       });

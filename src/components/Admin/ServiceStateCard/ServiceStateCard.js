@@ -6,13 +6,15 @@ const ServiceStateCard = (props) => {
         const id = e.target.name
         const status = e.target.value
         const product = {id,status}
-        fetch('update',{method:'PATCH',
+        console.log(product);
+fetch(`/update/${id}`,{
+    method:'patch',
     headers:{'Content-Type':'application/json'},
-body:JSON.stringify(product)})
-.then(res=>res.json())
-.then(data=>{
-    console.log('done ');
+    body:JSON.stringify(status)
 })
+.then(res=>res.json())
+.then(data=>{console.log(data);})
+.catch(err=>{console.log(err);})
 
     }
     return (

@@ -2,7 +2,17 @@ import React from 'react';
 
 const AdminDeleteCard = (props) => {
     const handelDelet = (event) =>{
-        console.log(event.target.value);
+    //     fetch(`https://gamenig.herokuapp.com/delet/${_id}`,{
+    //         method:'DElete'
+    //       })
+    //       .then(res=>res.json())
+    //     .then(data=>
+    //     console.log(data)
+    //   )
+        // console.log(event.target.value);
+        fetch(`http://localhost:9000/deleatService/${event.target.value}`,{ method:'DElete'})
+        .then(res=>res.json())
+        .then(result=>{console.log(result);})
     }
     return (
         <li class="list-group-item d-flex justify-content-between align-items-center">

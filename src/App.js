@@ -8,6 +8,7 @@ import {
   Link,
   NavLink
 } from "react-router-dom";
+import AddAdmin from "./components/Admin/AddAdmin/AddAdmin";
 import AddReview from "./components/Admin/AddReview/AddReview";
 
 import AddService from "./components/Admin/AddService/AddService";
@@ -20,14 +21,20 @@ import Login from "./components/Home/Login/Login/Login";
 import NavBar from "./components/Home/NavBar/NavBar";
 import Services from "./components/Home/Services/Services";
 // import LogIn from './components/Home/Login/Login/Login'
+import PrivetRoute from './components/Home/Login/PrivateRoute/PrivateRoute'
+
+
+export const UserContext = createContext()
+
+
 const App = () => {
-  const UserContext = createContext()
+
   const [loggedInUser, setLoggedInUser] = useState({});
 console.log(loggedInUser);
   return (
-    <div>
 
-      {/* hear we implementing routeing */}
+
+  
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
         <Router>
             <Switch>
@@ -37,10 +44,10 @@ console.log(loggedInUser);
               <Route path='/home'>
                   <Home></Home>
               </Route> 
-              <Route path='/addService'>
+              <PrivetRoute path='/addService'>
                   <NavBar></NavBar>
                   <AddService></AddService>
-              </Route>
+              </PrivetRoute>
               <Route path='/addReview'>
                   <NavBar></NavBar>
                   <AddReview></AddReview>
@@ -48,11 +55,15 @@ console.log(loggedInUser);
               <Route path='/ChangeState'>
                   <NavBar></NavBar>
                   <ChangeServiceState></ChangeServiceState>
-              </Route>   
-              <Route path='/deleatService'>
+              </Route>  
+              <PrivetRoute path='/addAdmin'>
+                  <NavBar></NavBar>
+               <AddAdmin></AddAdmin>
+              </PrivetRoute>  
+              <PrivetRoute path='/deleatService/:id'>
                   <NavBar></NavBar>
                   <DeletService></DeletService>
-              </Route>
+              </PrivetRoute>
               <Route path='/logIn'>
                   <NavBar></NavBar>
                   <Login></Login>
@@ -60,7 +71,7 @@ console.log(loggedInUser);
             </Switch>
           </Router>
       </UserContext.Provider>
-    </div>
+
   );
 };
 

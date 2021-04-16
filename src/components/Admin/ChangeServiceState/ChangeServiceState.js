@@ -22,7 +22,8 @@ const ChangeServiceState = () => {
       <Link  class="nav-link" to="/addService">addService</Link>
     <Link  class="nav-link" to="/addReview">addReview</Link>   
      <Link  class="nav-link" to="/ChangeState">ChangeState</Link>
-    <Link  class="nav-link" to="/deleatService">deleatService</Link>
+    <Link  class="nav-link" to="/deleatService/a">deleatService</Link>
+    <Link  class="nav-link" to="/addAdmin">addAdmin</Link>
       </div>
       <div class="col-6 col-md-6">
                  {/*  content */}
