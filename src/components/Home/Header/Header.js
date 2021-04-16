@@ -6,6 +6,7 @@ import Sidebar from '../../Admin/Sidebar/Sidebar';
 import BusinessInfo from '../BusinessInfo/BusinessInfo';
 import Footer from '../footer copy';
 import { FooterContainer } from '../Footer/Footer';
+import GetPament from '../GetPament/GetPament';
 
 import MainHeader from '../MainHeader/MainHeader';
 import NavBar from '../NavBar/NavBar';
@@ -27,6 +28,7 @@ const Header = () => {
            <Review></Review>
        {/* <AddService></AddService> */}
        {/* <ChangeServiceState></ChangeServiceState> */}
+       <GetPament></GetPament>
            <FooterContainer></FooterContainer>
          
         </div>
