@@ -16,10 +16,11 @@ const Sidebar = () => {
     return (
     <div style={{height:'8oopx'}}>
          <nav class="nav flex-column">
-             {/* <button onClick={handeladdService}>addService</button> */}
+           
    
-             <Link to="/admin/addService"></Link>
-             <Link to="/admin/addReview"><button onClick={() => window.location.reload(false)}>Click to reload!2</button></Link>
+           
+             <Link to="/addService"> Add service</Link>
+
        
         </nav>
     </div>

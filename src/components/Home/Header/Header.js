@@ -1,5 +1,7 @@
 import React from 'react';
-import AdminDashBord from '../../Admin/AdminDashBord/AdminDashBord';
+import AddService from '../../Admin/AddService/AddService';
+// import AdminDashBord from '../../Admin/AdminDashBord/AdminDashBord';
+import ChangeServiceState from '../../Admin/ChangeServiceState/ChangeServiceState';
 import Sidebar from '../../Admin/Sidebar/Sidebar';
 import BusinessInfo from '../BusinessInfo/BusinessInfo';
 import Footer from '../footer copy';
@@ -19,11 +21,12 @@ const Header = () => {
             {/* <Services></Services> */}
           
            <Services></Services>
-           <AdminDashBord></AdminDashBord>
+           {/* <AdminDashBord></AdminDashBord> */}
            <h2>review</h2>
         
            <Review></Review>
-       
+       {/* <AddService></AddService> */}
+       {/* <ChangeServiceState></ChangeServiceState> */}
            <FooterContainer></FooterContainer>
          
         </div>

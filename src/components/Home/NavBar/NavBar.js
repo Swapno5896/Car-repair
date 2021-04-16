@@ -19,13 +19,13 @@ const NavBar = () => {
     </button>
     <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+  <Link class="nav-link"  to="/home">Home</Link>
   </li>
   <li class="nav-item">
-  <Link to="/admin">Admin</Link>
+  <Link  class="nav-link" to="/addService">Admin</Link>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <Link  class="nav-link" to="/logIn">Log In</Link>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

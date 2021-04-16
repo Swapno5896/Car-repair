@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 const axios = require('axios');
 const AddService = () => {
 
-const [service, setService] = useState({title:'',discription:'',imgUrl:'',isBtnDisable:false})
+const [service, setService] = useState({title:'',discription:'',imgUrl:'',isBtnDisable:false,status:'pending'})
 
 const handelInputData = (event) =>{
 console.log(event.target.name , event.target.value);
@@ -40,7 +46,7 @@ const handelImgUpload = event =>{
 
     const handelSubmit = () =>{
         // console.log(service);
-      console.clear()
+      // console.clear()
             fetch(`http://localhost:9000/addService`,{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
@@ -68,7 +74,16 @@ const handelImgUpload = event =>{
               });
     }
     return (
-        <form className='row'>
+      <div class="row g-3">
+      <div class="col-sm-6 col-md-4">
+      <Link  class="nav-link" to="/addService">addService</Link>
+      <Link  class="nav-link" to="/addReview">addService</Link>
+      <Link  class="nav-link" to="/ChangeState">ChangeState</Link>
+      <Link  class="nav-link" to="/deleatService">deleatService</Link>
+      </div>
+      <div class="col-6 col-md-6">
+               
+      <form className='row'>
         <div class='col-md-6'>
           <label for="exampleInputEmail1" class="form-label">Service Title(admin)</label>
           <input onBlur={handelInputData} name='title' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
@@ -91,6 +106,10 @@ const handelImgUpload = event =>{
 
         </div>
       </form>
+
+      </div>
+    </div>
+  
     );
 };
 
