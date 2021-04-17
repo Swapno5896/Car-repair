@@ -3,12 +3,15 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config'
 import { useHistory, useLocation } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../../../../App';
 const Login = () => {
+  const [loggedInUser, setLoggedInUser] =useContext(UserContext)
   const history = useHistory();
   const location = useLocation();
   const { from } = location.state || { from: { pathname: "/" } };
 
-  const [loggedInUser, setLoggedInUser] = useState({});
+
 
   if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);

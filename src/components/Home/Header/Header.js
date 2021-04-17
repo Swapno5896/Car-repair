@@ -23,12 +23,12 @@ const Header = () => {
           
            <Services></Services>
            {/* <AdminDashBord></AdminDashBord> */}
-           <h2>review</h2>
-        
+      
+     
            <Review></Review>
        {/* <AddService></AddService> */}
        {/* <ChangeServiceState></ChangeServiceState> */}
-       <GetPament></GetPament>
+       {/* <GetPament></GetPament> */}
            <FooterContainer></FooterContainer>
          
         </div>

@@ -27,14 +27,15 @@ const AddReview = () => {
     }
     return (
       <div class="row g-3">
-               <div class="col-sm-6 col-md-4">
+        <Sidebar></Sidebar>
+               {/* <div class="col-sm-6 col-md-4">
       <Link  class="nav-link" to="/addService">addService</Link>
       <Link  class="nav-link" to="/addReview">add Review</Link>
       <Link  class="nav-link" to="/ChangeState">ChangeState</Link>
       <Link  class="nav-link" to="/deleatService/a">deleatService</Link>
       <Link  class="nav-link" to="/addAdmin">addAdmin</Link>
-      </div>
-      <div class="col-6 col-md-6">
+      </div> */}
+      <div class="offset-md-1 col-md-6">
                  {/*  content */}
                  <div>
            <p class="text-center">Please add review for our product(admin)</p>

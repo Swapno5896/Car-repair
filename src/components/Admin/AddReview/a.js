@@ -11,15 +11,12 @@ const a = () => {
         </div>
         <div class="col-6 col-md-6">
                    {/*  content */}
-                   <div style={{margin:'50px'}}>
-             <ul class="list-group">
-       {
-            service.map(data=><ServiceStateCard data={data}></ServiceStateCard>)
-       }
-      
-      </ul>
-      </div>
+                   <div class="form-floating mb-3">
+  <input onBlur={handelBlur} type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+  <label for="floatingInput">Email address</label>
+  <input onClick={handelSubmit} type="submit"  value="submit"/>
   
+</div>
         </div>
       </div>
     );

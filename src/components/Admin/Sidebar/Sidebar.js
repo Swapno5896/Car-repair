@@ -7,14 +7,14 @@ import {
   } from "react-router-dom";
 const Sidebar = () => {
     return (
-        <div>
-        <Link  class="nav-link" to="/addService">addService</Link>
-      <Link  class="nav-link" to="/addReview">addReview</Link>
-      <Link  class="nav-link" to="/ChangeState">ChangeState</Link>
-      <Link  class="nav-link" to="/deleatService">deleatService</Link>
-       <Link  class="nav-link" to="/addAdmin">deleatService</Link>
-        </div>
     
+            <li class="offset-md-2 col-sm-6 col-md-2 list-group-item  align-items-center">
+              <Link class="nav-link list-group-item" to="/addService">addService</Link>
+              <Link  class="nav-link list-group-item" to="/addReview">addReview</Link>
+              <Link  class="nav-link list-group-item" to="/ChangeState">ChangeState</Link>
+              <Link  class="nav-link list-group-item" to="/deleatService">deleatService</Link>
+              <Link  class="nav-link list-group-item" to="/deleatService">deleatService</Link>
+            </li>
 
      
     );

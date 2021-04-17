@@ -22,6 +22,7 @@ import NavBar from "./components/Home/NavBar/NavBar";
 import Services from "./components/Home/Services/Services";
 // import LogIn from './components/Home/Login/Login/Login'
 import PrivetRoute from './components/Home/Login/PrivateRoute/PrivateRoute'
+import CheckOut from "./components/Home/CheckOut/CheckOut";
 
 
 export const UserContext = createContext()
@@ -29,8 +30,8 @@ export const UserContext = createContext()
 
 const App = () => {
 
-  const [loggedInUser, setLoggedInUser] = useState({});
-console.log(loggedInUser);
+  const [loggedInUser, setLoggedInUser] = useState({name:'',email:''});
+// console.log(loggedInUser);
   return (
 
 
@@ -44,6 +45,11 @@ console.log(loggedInUser);
               <Route path='/home'>
                   <Home></Home>
               </Route> 
+              <PrivetRoute path='/CheckOut/:_id'>
+              <NavBar></NavBar>
+                  <CheckOut></CheckOut>
+              </PrivetRoute> 
+              
               <PrivetRoute path='/addService'>
                   <NavBar></NavBar>
                   <AddService></AddService>
@@ -61,6 +67,10 @@ console.log(loggedInUser);
                <AddAdmin></AddAdmin>
               </PrivetRoute>  
               <PrivetRoute path='/deleatService/:id'>
+                  <NavBar></NavBar>
+                  <DeletService></DeletService>
+              </PrivetRoute>
+              <PrivetRoute path='/deleatService/'>
                   <NavBar></NavBar>
                   <DeletService></DeletService>
               </PrivetRoute>
