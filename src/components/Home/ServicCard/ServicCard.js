@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom';
+import './ServiceCard.css'
 
 const ServicCard = (props) => {
     const history = useHistory()
@@ -7,15 +8,27 @@ const ServicCard = (props) => {
     // console.log(props);
 
 
+    const [service, setService] = useState({title:'',price:'',discription:'',imgUrl:'',isBtnDisable:false,status:''})
 
 
 
 
 
 const handleOrder = () =>{
-    history.push(`/checkOut/${props.data._id}`);
+    const newservice ={...service}
+    newservice.title =props.data.title
+    newservice.title =props.data.discription
+    // newservice.title =props.data.title
+    setService(newservice)
+  
     // console.log(props.data._id);
-
+// send data to derver  bookedService
+fetch('http://localhost:9000/bookedService',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(service)
+  })
+  history.push(`/checkOut/${props.data._id}`);
 }
 
 
@@ -24,15 +37,15 @@ const handleOrder = () =>{
         //     <p>{props.data.title}</p>
         // </div>
         <div className='col-md-4'>
-        <div className='d-flex align-items-center'>
+        <div className='d-flex align-items-center button hvr-grow'>
             <div className='mr-3'>
               <img style={{height:'50px'}} src={props.data.imgUrl} alt=""/>
             </div>
     
-            <div className='p-4'>
+            <div className='p-4 '>
                 <p>{props.data.title}</p>
                 <small>{props.data.discription}</small>
-                <button onClick={handleOrder}>Order now</button>
+                <button className="hvr-grow" onClick={handleOrder}>Order now</button>
             </div>
         </div>
     </div>

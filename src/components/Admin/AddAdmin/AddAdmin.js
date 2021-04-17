@@ -2,12 +2,21 @@ import React, { useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 
 const AddAdmin = () => {
-    const [admin ,setAdmin] =useState('')
+    const [adminEmail ,setAdminEmail] =useState({email:''})
     const handelBlur =(event)=>{
-        setAdmin(event.target.value)
+      const newAdminEmail = {...adminEmail}
+      newAdminEmail.email = event.target.value
+       setAdminEmail(newAdminEmail)
     }
    const  handelSubmit =()=>{
-       console.log(admin);
+       console.log(adminEmail);
+       fetch(`http://localhost:9000/addAdmin`,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(adminEmail)
+     
+      
+    })
    }
     return (
         <div class="row g-3">

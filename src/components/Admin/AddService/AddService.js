@@ -9,7 +9,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const axios = require('axios');
 const AddService = () => {
 
-const [service, setService] = useState({title:'',discription:'',imgUrl:'',isBtnDisable:false,status:'pending'})
+const [service, setService] = useState({title:'',price:'',discription:'',imgUrl:'',isBtnDisable:false,status:'pending'})
 
 const handelInputData = (event) =>{
 console.log(event.target.name , event.target.value);
@@ -102,6 +102,10 @@ const handelImgUpload = event =>{
         <div class='col-md-6'>
           <label for="exampleInputEmail1" class="form-label">Service Description</label>
           <input onBlur={handelInputData} name='discription'  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+        </div>
+        <div class='col-md-6'>
+          <label for="exampleInputEmail1" class="form-label">Service Price</label>
+          <input onBlur={handelInputData} name='price'  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
         </div>
         {/* <div class="col-md-6">
           <label for="exampleInputPassword1" class="form-label">Description</label>

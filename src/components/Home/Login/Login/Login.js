@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useEffect, useState }  from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config'
@@ -6,7 +6,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../../../App';
 const Login = () => {
-  const [loggedInUser, setLoggedInUser] =useContext(UserContext)
+  const [loggedInUser, setLoggedInUser, isAdmin, setAdmin] =useContext(UserContext)
   const history = useHistory();
   const location = useLocation();
   const { from } = location.state || { from: { pathname: "/" } };
@@ -31,7 +31,9 @@ const Login = () => {
       const { displayName, email } = result.user;
       const signedInUser = { name: displayName, email }
       setLoggedInUser(signedInUser);
-      console.log(loggedInUser);
+    
+      // console.log(loggedInUser);
+      // handelIsAdmin()
       storeAuthToken();
       // ...
     }).catch((error) => {
@@ -54,6 +56,35 @@ const Login = () => {
         // Handle error
       });
   }
+
+//  const handelIsAdmin = () =>{
+//   fetch(`http://localhost:9000/checkAdmin`,{
+//     method:'POST',
+//     headers:{'Content-Type':'application/json'},
+  
+//     body: JSON.stringify({email:loggedInUser.emails})
+//   })
+//     .then(res=>res.json())
+//     .then(data=>{
+//       if(data.email){
+//         const newIsadmin = {...isAdmin}
+//         newIsadmin.isAdmin = true
+//         setAdmin(newIsadmin)
+//         console.log('admin');
+//       }
+    
+    
+//     })
+ 
+
+//  }
+    // useEffect(()=>{
+     
+      
+
+    // },[])
+
+
   return (
 
       <div class="d-flex justify-content-center">

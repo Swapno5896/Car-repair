@@ -31,12 +31,14 @@ export const UserContext = createContext()
 const App = () => {
 
   const [loggedInUser, setLoggedInUser] = useState({name:'',email:''});
+  const [isAdmin, setAdmin] = useState(false);
+
 // console.log(loggedInUser);
   return (
 
 
   
-      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser,isAdmin, setAdmin]}>
         <Router>
             <Switch>
               <Route exact path='/'>
@@ -46,8 +48,16 @@ const App = () => {
                   <Home></Home>
               </Route> 
               <PrivetRoute path='/CheckOut/:_id'>
-              <NavBar></NavBar>
+                    <NavBar></NavBar>
                   <CheckOut></CheckOut>
+              </PrivetRoute> 
+              <PrivetRoute path='/CheckOut'>
+                    <NavBar></NavBar>
+                  <CheckOut></CheckOut>
+              </PrivetRoute>
+              <PrivetRoute path='/addAdmin'>
+              <NavBar></NavBar>
+                  <AddAdmin></AddAdmin>
               </PrivetRoute> 
               
               <PrivetRoute path='/addService'>

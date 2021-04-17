@@ -9,6 +9,13 @@ import {
     Route,
     Link
   } from "react-router-dom";
+import Sidebar from '../../Admin/Sidebar/Sidebar';
+import SimpleCardFrom from '../SimpleCardFrom/SimpleCardFrom';
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+
+
+ import ProcessPament from '../a/ProcessPament.js'
 const CheckOut = () => {
     const [loggedInUser, setLoggedInUser] =useContext(UserContext)
   
@@ -35,14 +42,19 @@ useEffect(()=>{
 console.log(addedProduct);
     return (
         <div class="row g-3">
-            <div class="col-sm-6 col-md-4">
-                <Link  class="nav-link" to="/addService">addService</Link>
-                <Link  class="nav-link" to="/addReview">addReview</Link>   
-                <Link  class="nav-link" to="/ChangeState">ChangeState</Link>
-                <Link  class="nav-link" to="/deleatService">deleatService</Link>
-            </div>
-            <div style={{border:'2px solid red'}} class="col-md-8 col-md-6">
-                 <GetPament></GetPament>
+        <Sidebar></Sidebar>
+            <div style={{border:'2px solid red', margin:'20px 50px'}} class="col-md-8 col-md-6">
+              <div>
+                <h2>{loggedInUser.name}</h2>
+                <h3>{addedProduct.title}</h3> 
+              </div>
+              {/* price dhakaita hoeb */}
+              <div>
+
+              </div>
+                 {/* <GetPament></GetPament> */}
+                 {/* <SimpleCardFrom></SimpleCardFrom> */}
+                 <ProcessPament></ProcessPament>
             </div>
       </div>
     );
