@@ -10,7 +10,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const ChangeServiceState = () => {
     const [service, setservice] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:9000/service')
+        fetch('http://localhost:9000/bookedService')
         .then(res=>res.json())
         .then(data=>{
             // console.log('service',data);

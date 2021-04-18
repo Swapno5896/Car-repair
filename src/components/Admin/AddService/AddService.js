@@ -46,7 +46,8 @@ const handelImgUpload = event =>{
 
 
     const handelSubmit = () =>{
-        // console.log(service);
+         console.log(service);
+        
       // console.clear()
             fetch(`http://localhost:9000/addService`,{
                 method:'POST',
@@ -54,7 +55,7 @@ const handelImgUpload = event =>{
                 body:JSON.stringify(service)
              
               
-            })
+       })
     }
 
     const handelImgUploads = (event) =>{

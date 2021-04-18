@@ -43,7 +43,7 @@ useEffect(()=>{
   })
 },[])
 const handelUpload = (result) =>{
-  fetch('http://localhost:9000/bookedService',{
+  fetch('http://localhost:9000/aadBookedService',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify(result)
@@ -92,19 +92,16 @@ const handelUpload = (result) =>{
     return (
         <div class="row g-3">
         <Sidebar></Sidebar>
-            <div style={{border:'2px solid red', margin:'20px 50px'}} class="col-md-8 col-md-6">
+            <div class=" col-md-6">
               <div>
                 <h2>{loggedInUser.name}</h2>
                 <h3>{service.title}</h3> 
               </div>
-              {/* price dhakaita hoeb */}
-              <div>
-
+          
+              <div  className='pament'>
+                <ProcessPament></ProcessPament>
               </div>
-                 {/* <GetPament></GetPament> */}
-                 {/* <SimpleCardFrom></SimpleCardFrom> */}
-                 <ProcessPament></ProcessPament>
-            </div>
+          </div>
       </div>
     );
 };

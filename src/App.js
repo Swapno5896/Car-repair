@@ -23,6 +23,8 @@ import Services from "./components/Home/Services/Services";
 // import LogIn from './components/Home/Login/Login/Login'
 import PrivetRoute from './components/Home/Login/PrivateRoute/PrivateRoute'
 import CheckOut from "./components/Home/CheckOut/CheckOut";
+// import BookingList from "./components/Home/BookingList/BookingList";
+import BookingListUp from "./components/Home/BookingList/BookingListUp";
 
 
 export const UserContext = createContext()
@@ -54,6 +56,10 @@ const App = () => {
               <PrivetRoute path='/CheckOut'>
                     <NavBar></NavBar>
                   <CheckOut></CheckOut>
+              </PrivetRoute>
+              <PrivetRoute path='/bookingList'>
+                    <NavBar></NavBar>
+                  <BookingListUp></BookingListUp>
               </PrivetRoute>
               <PrivetRoute path='/addAdmin'>
               <NavBar></NavBar>

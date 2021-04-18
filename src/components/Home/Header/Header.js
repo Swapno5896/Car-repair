@@ -3,7 +3,8 @@ import AddService from '../../Admin/AddService/AddService';
 // import AdminDashBord from '../../Admin/AdminDashBord/AdminDashBord';
 import ChangeServiceState from '../../Admin/ChangeServiceState/ChangeServiceState';
 import Sidebar from '../../Admin/Sidebar/Sidebar';
-import BookingList from '../BookingList/BookingList';
+import AboutUs from '../AboutUs/AboutUs';
+// import BookingList from '../BookingList/BookingList';
 import BusinessInfo from '../BusinessInfo/BusinessInfo';
 import Footer from '../footer copy';
 import { FooterContainer } from '../Footer/Footer';
@@ -21,17 +22,10 @@ const Header = () => {
             <MainHeader></MainHeader>
             <BusinessInfo></BusinessInfo>
             <Services></Services>
-{/*           
-           <Services></Services> */}
-           {/* <AdminDashBord></AdminDashBord> */}
-      <BookingList></BookingList>
-{/*      
-           <Review></Review> */}
-       {/* <AddService></AddService> */}
-       {/* <ChangeServiceState></ChangeServiceState> */}
-       {/* <GetPament></GetPament> */}
-       
-           <FooterContainer></FooterContainer>
+            {/* <BookingList></BookingList> */}
+            <Review></Review>
+            <AboutUs></AboutUs>
+            <FooterContainer></FooterContainer>
          
         </div>
     );

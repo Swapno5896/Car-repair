@@ -11,7 +11,7 @@ import { UserContext } from '../../../App';
 const Sidebar = () => {
   const [loggedInUser, setLoggedInUser] =useContext(UserContext)
   const [isAdmin, setAdmin] = useState(false);
-  console.log(loggedInUser,isAdmin);
+  // console.log(loggedInUser,isAdmin);
 useEffect(()=>{
   fetch(`http://localhost:9000/checkAdmin`,{
         method:'POST',
@@ -46,6 +46,7 @@ useEffect(()=>{
               isAdmin || <div>
                 <Link  class="nav-link list-group-item" to="/addReview">addReview</Link>
                 <Link  class="nav-link list-group-item" to="/CheckOut">Book</Link>
+                <Link  class="nav-link list-group-item" to="/bookingList">BookingList</Link>
               </div> 
             
 
