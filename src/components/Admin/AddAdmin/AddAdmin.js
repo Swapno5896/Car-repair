@@ -9,7 +9,7 @@ const AddAdmin = () => {
        setAdminEmail(newAdminEmail)
     }
    const  handelSubmit =()=>{
-       console.log(adminEmail);
+      //  console.log(adminEmail);
        fetch(`http://localhost:9000/addAdmin`,{
         method:'POST',
         headers:{'Content-Type':'application/json'},

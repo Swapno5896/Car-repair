@@ -14,7 +14,7 @@ const AddReview = () => {
         setReview(newReview)
     }
     const handelSubmit = (event) =>{
-        console.log(review);
+        // console.log(review);
         // uploading to database
         fetch(`http://localhost:9000/addReview`,{
             method:'POST',

@@ -12,14 +12,14 @@ const AddService = () => {
 const [service, setService] = useState({title:'',price:'',discription:'',imgUrl:'',isBtnDisable:false,status:'pending'})
 
 const handelInputData = (event) =>{
-console.log(event.target.name , event.target.value);
+// console.log(event.target.name , event.target.value);
 const newService = {...service}
  newService[event.target.name] = event.target.value
  setService(newService)
 }
 // image upload and set url
 const handelImgUpload = event =>{
- console.log(event.target.files[0]);
+//  console.log(event.target.files[0]);
     const newService = {...service}
     // newProdct.isBtnDisable = true
     // setAddedProduct(newProdct)
@@ -68,7 +68,7 @@ const handelImgUpload = event =>{
               newService.imgUrl = response.data.data.display_url
               const newService3={...newService}
               setService(newService3)
-              console.log(service);
+              // console.log(service);
             })
             .catch(function (error) {
                 console.log(error);

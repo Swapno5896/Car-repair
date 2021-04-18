@@ -3,6 +3,7 @@ import AddService from '../../Admin/AddService/AddService';
 // import AdminDashBord from '../../Admin/AdminDashBord/AdminDashBord';
 import ChangeServiceState from '../../Admin/ChangeServiceState/ChangeServiceState';
 import Sidebar from '../../Admin/Sidebar/Sidebar';
+import BookingList from '../BookingList/BookingList';
 import BusinessInfo from '../BusinessInfo/BusinessInfo';
 import Footer from '../footer copy';
 import { FooterContainer } from '../Footer/Footer';
@@ -19,16 +20,17 @@ const Header = () => {
             <NavBar></NavBar>
             <MainHeader></MainHeader>
             <BusinessInfo></BusinessInfo>
-            {/* <Services></Services> */}
-          
-           <Services></Services>
+            <Services></Services>
+{/*           
+           <Services></Services> */}
            {/* <AdminDashBord></AdminDashBord> */}
-      
-     
-           <Review></Review>
+      <BookingList></BookingList>
+{/*      
+           <Review></Review> */}
        {/* <AddService></AddService> */}
        {/* <ChangeServiceState></ChangeServiceState> */}
        {/* <GetPament></GetPament> */}
+       
            <FooterContainer></FooterContainer>
          
         </div>

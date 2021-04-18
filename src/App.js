@@ -38,7 +38,7 @@ const App = () => {
 
 
   
-      <UserContext.Provider value={[loggedInUser, setLoggedInUser,isAdmin, setAdmin]}>
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
         <Router>
             <Switch>
               <Route exact path='/'>
@@ -64,10 +64,10 @@ const App = () => {
                   <NavBar></NavBar>
                   <AddService></AddService>
               </PrivetRoute>
-              <Route path='/addReview'>
+              <PrivetRoute path='/addReview'>
                   <NavBar></NavBar>
                   <AddReview></AddReview>
-              </Route>
+              </PrivetRoute>
               <Route path='/ChangeState'>
                   <NavBar></NavBar>
                   <ChangeServiceState></ChangeServiceState>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import BookingList from '../BookingList/BookingList';
 import ReviewCard from '../ReviewCard/ReviewCard';
 
 const Review = () => {
@@ -15,7 +16,7 @@ const Review = () => {
         <div>
                     <p class="text-center">This is review.</p>
             <div class="d-flex justify-content-center">
-               
+               <BookingList></BookingList>
                <div className="row w-75">
                    {
                        review.map(data=><ReviewCard data={data}></ReviewCard>)

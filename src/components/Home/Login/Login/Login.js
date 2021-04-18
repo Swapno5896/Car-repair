@@ -6,7 +6,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../../../App';
 const Login = () => {
-  const [loggedInUser, setLoggedInUser, isAdmin, setAdmin] =useContext(UserContext)
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext)
   const history = useHistory();
   const location = useLocation();
   const { from } = location.state || { from: { pathname: "/" } };

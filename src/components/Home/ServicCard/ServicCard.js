@@ -1,33 +1,39 @@
 import React, { useEffect, useState } from 'react'
+import { useContext } from 'react';
+
+
 import { useHistory } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import './ServiceCard.css'
 
 const ServicCard = (props) => {
     const history = useHistory()
 
-    // console.log(props);
+    // const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
 
-    const [service, setService] = useState({title:'',price:'',discription:'',imgUrl:'',isBtnDisable:false,status:''})
+    // const [service, setService] = useState({title:'',price:'',discription:'',imgUrl:'',isBtnDisable:false,status:'Pending',userEmail:''})
 
 
 
 
 
 const handleOrder = () =>{
-    const newservice ={...service}
-    newservice.title =props.data.title
-    newservice.title =props.data.discription
-    // newservice.title =props.data.title
-    setService(newservice)
+//     const newservice ={...service}
+//     newservice.title =props.data.title
+//     newservice.title =props.data.discription  
+
+//      newservice.price =props.data.price 
+//      newservice.userEmail =loggedInUser.email 
+//     setService(newservice)
   
-    // console.log(props.data._id);
-// send data to derver  bookedService
-fetch('http://localhost:9000/bookedService',{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(service)
-  })
+//     // console.log(props.data._id);
+// // send data to derver  bookedService
+// fetch('http://localhost:9000/bookedService',{
+//     method:'POST',
+//     headers:{'Content-Type':'application/json'},
+//     body:JSON.stringify(service)
+//   })
   history.push(`/checkOut/${props.data._id}`);
 }
 
