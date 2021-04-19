@@ -17,7 +17,7 @@ const DeletService = () => {
             setServices(data)
         })
     },[])
-console.log(services);
+// console.log(services);
     return (
         <div class="row g-3">
           <Sidebar></Sidebar>

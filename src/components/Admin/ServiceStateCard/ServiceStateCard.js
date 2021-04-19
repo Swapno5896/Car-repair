@@ -6,7 +6,7 @@ const ServiceStateCard = (props) => {
         const id = e.target.name
         const status = e.target.value
         const product = {id,status}
-        console.log('product is ',product);
+        // console.log('product is ',product);
 fetch(`http://localhost:9000/update`,{
     method:'PATCH',
     headers:{'Content-Type':'application/json'},

@@ -5,12 +5,12 @@ const BusinessInfoCard = ({data}) => {
     return (
         <div className='col-md-4'>
             <div className='d-flex align-items-center'>
-                <div className='mr-3'>
+                {/* <div className='mr-3'>
                   <img style={{height:'50px'}} src={data.img} alt=""/>
-                </div>
+                </div> */}
         
                 <div className='p-4'>
-                    <p>{data.title}</p>
+                    <p className="text-center">{data.title}</p>
                     <small>{data.description}</small>
                 </div>
             </div>

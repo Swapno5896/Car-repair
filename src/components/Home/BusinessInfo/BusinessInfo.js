@@ -1,25 +1,25 @@
 import React from 'react';
-import clock from '../../../images/clock.png'
-import location from '../../../images/location.png'
-import phone from '../../../images/phone-call.png'
+import { useEffect, useState } from 'react/cjs/react.development';
 import BusinessInfoCard from '../BusinessInfoCard/BusinessInfoCard';
-const Fakedata =[
-    {title:'find  us on s',img: clock, description:"this is very good thing. you may love it"},
-    {title:'find  us on s',img: clock, description:"this is very good thing. you may love it"},
-    {title:'find  us on s',img: clock, description:"this is very good thing. you may love it"}
-]
 const BusinessInfo = () => {
+    const [businessInfo,setBusinessInfo] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost:9000/businessInfo')
+        .then(res=>res.json())
+        .then(data=>{
+            setBusinessInfo(data)
+        })
+    },[])
     return (
             <div>
-                    <p class="text-center">This is BusinessInfo.</p>
-                    <div class="d-flex justify-content-center">
-               
-               <div className="row w-75">
-                   {
-                       Fakedata.map(data=><BusinessInfoCard data={data}></BusinessInfoCard>)
-                   }
-               </div>
-           </div>
+                    <h3 class="text-center">Business Info</h3>
+                <div class="d-flex  justify-content-center">
+                    <div className="row w-75">
+                        {
+                            businessInfo.map(data=><BusinessInfoCard data={data}></BusinessInfoCard>)
+                        }
+                    </div>
+                </div>
             </div>
       
     );

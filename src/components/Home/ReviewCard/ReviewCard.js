@@ -1,9 +1,9 @@
 import React from 'react';
-
+import './ReviewCard.css'
 const ReviewCard = (props) => {
     // console.log(props);
     return (
-        <div className='col-md-4'>
+        <div className='col-md-4 review'>
             <div className='d-flex align-items-center'>
                 <div className=''>
                     <img style={{height:'50px'}} src={props.data.imgUrl} alt=""/>

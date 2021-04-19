@@ -21,7 +21,7 @@ useEffect(()=>{
       })
         .then(res=>res.json())
         .then(data=>{
-          console.log('data  from backend ',data);
+          // console.log('data  from backend ',data);
           setAdmin(data)})
 },[loggedInUser])
 // console.log(isAdmin);
