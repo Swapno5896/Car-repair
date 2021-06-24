@@ -7,7 +7,7 @@ const ServiceStateCard = (props) => {
         const status = e.target.value
         const product = {id,status}
         // console.log('product is ',product);
-fetch(`http://localhost:9000/update`,{
+fetch(`https://dry-coast-93619.herokuapp.com/update`,{
     method:'PATCH',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify(product)

@@ -8,7 +8,7 @@ const BookingListUp = () => {
 
     // const email = loggedInUser.email
 useEffect(()=>{
-    fetch(`http://localhost:9000/BookingService`,{
+    fetch(`https://dry-coast-93619.herokuapp.com/BookingService`,{
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body: JSON.stringify(loggedInUser)

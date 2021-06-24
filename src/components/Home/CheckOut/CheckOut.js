@@ -9,7 +9,7 @@ const CheckOut = () => {
 
     const [service, setService] =useState({title:'',price:'',discription:'',imgUrl:'',status:'Pending',userEmail:'',serviceBuingDate:new Date()})
 useEffect(()=>{
-  fetch(`http://localhost:9000/checkOut/${_id}`)
+  fetch(`https://dry-coast-93619.herokuapp.com/checkOut/${_id}`)
   .then(res=>res.json())
   .then(result=>{
     // console.log(result[0]);
@@ -25,7 +25,7 @@ useEffect(()=>{
    newservice.serviceBuingDate =new Date()
    newservice.userEmail =loggedInUser.email 
 
-   fetch('http://localhost:9000/aadBookedService',{
+   fetch('https://dry-coast-93619.herokuapp.com/aadBookedService',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify(newservice)

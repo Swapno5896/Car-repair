@@ -13,7 +13,7 @@ const Sidebar = () => {
   const [isAdmin, setAdmin] = useState(false);
   // console.log(loggedInUser,isAdmin);
 useEffect(()=>{
-  fetch(`http://localhost:9000/checkAdmin`,{
+  fetch(`https://dry-coast-93619.herokuapp.com/checkAdmin`,{
         method:'POST',
         headers:{'Content-Type':'application/json'},
       

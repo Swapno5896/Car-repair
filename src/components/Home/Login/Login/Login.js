@@ -58,7 +58,7 @@ const Login = () => {
   }
 
 //  const handelIsAdmin = () =>{
-//   fetch(`http://localhost:9000/checkAdmin`,{
+//   fetch(`https://dry-coast-93619.herokuapp.com/checkAdmin`,{
 //     method:'POST',
 //     headers:{'Content-Type':'application/json'},
   

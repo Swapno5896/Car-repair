@@ -11,7 +11,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const DeletService = () => {
     const [services, setServices] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:9000/service')
+        fetch('https://dry-coast-93619.herokuapp.com/service')
         .then(res=>res.json())
         .then(data=>{
             setServices(data)

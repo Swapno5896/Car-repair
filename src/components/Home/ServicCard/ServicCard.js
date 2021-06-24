@@ -29,7 +29,7 @@ const handleOrder = () =>{
   
 //     // console.log(props.data._id);
 // // send data to derver  bookedService
-// fetch('http://localhost:9000/bookedService',{
+// fetch('https://dry-coast-93619.herokuapp.com/bookedService',{
 //     method:'POST',
 //     headers:{'Content-Type':'application/json'},
 //     body:JSON.stringify(service)

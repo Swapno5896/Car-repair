@@ -47,10 +47,10 @@ const newService = {...service}
 
 
     const handelSubmit = () =>{
-         console.log(service);
+        //  console.log(service);
         
       // console.clear()
-            fetch(`http://localhost:9000/addService`,{
+            fetch(`https://dry-coast-93619.herokuapp.com/addService`,{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(service)

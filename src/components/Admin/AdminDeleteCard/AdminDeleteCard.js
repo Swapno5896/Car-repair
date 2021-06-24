@@ -10,7 +10,7 @@ const AdminDeleteCard = (props) => {
     //     console.log(data)
     //   )
         // console.log(event.target.value);
-        fetch(`http://localhost:9000/deleatService/${event.target.value}`,{ method:'DElete'})
+        fetch(`https://dry-coast-93619.herokuapp.com/deleatService/${event.target.value}`,{ method:'DElete'})
         .then(res=>res.json())
         .then(result=>{console.log(result);})
     }

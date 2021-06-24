@@ -1,10 +1,9 @@
-import React from 'react';
-import { useEffect, useState } from 'react/cjs/react.development';
+import React, { useState,useEffect } from 'react';
 import BusinessInfoCard from '../BusinessInfoCard/BusinessInfoCard';
 const BusinessInfo = () => {
     const [businessInfo,setBusinessInfo] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:9000/businessInfo')
+        fetch('https://dry-coast-93619.herokuapp.com/businessInfo')
         .then(res=>res.json())
         .then(data=>{
             setBusinessInfo(data)

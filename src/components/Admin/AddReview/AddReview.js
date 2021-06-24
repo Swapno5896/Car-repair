@@ -16,7 +16,7 @@ const AddReview = () => {
     const handelSubmit = (event) =>{
         // console.log(review);
         // uploading to database
-        fetch(`http://localhost:9000/addReview`,{
+        fetch(`https://dry-coast-93619.herokuapp.com/addReview`,{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(review)
